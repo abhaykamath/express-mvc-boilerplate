@@ -4,6 +4,7 @@
   "description": "An MVC-based express-mongoDB (Atlas) CRUD API boilerplate",
   "main": "index.js",
   "scripts": {
+    "prod": "node server.js",
     "dev": "nodemon server.js"
   },
   "keywords": [
