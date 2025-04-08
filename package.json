@@ -1,0 +1,27 @@
+{
+  "name": "express-mongo-mvc-boilerplate",
+  "version": "1.0.0",
+  "description": "An MVC-based express-mongoDB (Atlas) CRUD API boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "express",
+    "mongoDB",
+    "MVC",
+    "nodejs",
+    "atlas"
+  ],
+  "author": "M Abhay Kamath",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
