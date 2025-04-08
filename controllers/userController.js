@@ -25,6 +25,25 @@ const createUser = async (req, res) => {
   res.status(201).json(user);
 };
 
+// @desc Update user
+const updateUser = async (req, res) => {
+  try {
+    const { name, email, age } = req.body;
+    const user = await User.findByIdAndUpdate(
+      req.params.id,
+      { name, email, age },
+      {
+        new: true,
+        runValidators: true,
+      }
+    );
+    if (!user) return res.status(404).json({ message: "User not found" });
+    res.json(user);
+  } catch (error) {
+    res.status(400).json({ message: "Invalid ID" });
+  }
+};
+
 // @desc    Delete user
 const deleteUser = async (req, res) => {
   try {
@@ -40,5 +59,6 @@ module.exports = {
   getUsers,
   getUser,
   createUser,
+  updateUser,
   deleteUser,
 };
